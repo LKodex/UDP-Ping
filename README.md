@@ -9,3 +9,5 @@ Usage:
 `python3 Server/UDP_Ping_Server.py`  
 `python3 Client/UDP_Ping_Client.py`  
   
+[Project on GitHub](https://github.com/LKodex/UDP-Ping)  
+  
