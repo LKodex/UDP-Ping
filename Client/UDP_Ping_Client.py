@@ -25,7 +25,7 @@ def main(serverAddress = ('localhost', 12000), pingQuantity = 10, bufferSize = 4
             maximumRTT = RTT if RTT > maximumRTT else maximumRTT
             minimumRTT = RTT if RTT < minimumRTT else minimumRTT
             socket.settimeout(2 * RTT + 1)
-        except TimeoutError:
+        except (TimeoutError, socks.timeout):
             print(f'Request {seqNum} timed out.')
     socket.close()
     packetLost = packetSent - packetReceived
